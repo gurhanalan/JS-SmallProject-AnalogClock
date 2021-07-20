@@ -22,3 +22,82 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.clock {
+    height: 30rem;
+    width: 30rem;
+    background-color: aquamarine;
+    border-radius: 100%;
+    border-color: 1px solid black;
+    box-shadow: 0rem 3rem 3rem rgba(0, 0, 0, 0.158),
+        0rem -3rem 3rem rgba(0, 0, 0, 0.158);
+
+    position: relative;
+}
+
+.handle {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    /* transform: translateX(-50%); */
+}
+
+.hour {
+    --rotation: 30deg;
+    height: 25%;
+    width: 0.3rem;
+    background-color: black;
+    /* transform: translateX(-50%); */
+    transform: translateX(-50%) rotate(var(--rotation));
+}
+
+.time {
+    user-select: none;
+    position: absolute;
+    top: 0;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.time--1 {
+    --rotation: calc(1 * 30deg);
+}
+.time--2 {
+    --rotation: calc(2 * 30deg);
+}
+.time--3 {
+    --rotation: calc(3 * 30deg);
+}
+.time--4 {
+    --rotation: calc(4 * 30deg);
+}
+.time--5 {
+    --rotation: calc(5 * 30deg);
+}
+.time--6 {
+    --rotation: calc(6 * 30deg);
+}
+.time--7 {
+    --rotation: calc(7 * 30deg);
+}
+.time--8 {
+    --rotation: calc(8 * 30deg);
+}
+.time--9 {
+    --rotation: calc(9 * 30deg);
+}
+.time--10 {
+    --rotation: calc(10 * 30deg);
+}
+.time--11 {
+    --rotation: calc(11 * 30deg);
+}
+.time--12 {
+    --rotation: calc(12 * 30deg);
+}
