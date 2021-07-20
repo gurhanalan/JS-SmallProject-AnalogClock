@@ -21,12 +21,15 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    background-image: linear-gradient(135deg, #abdcff 10%, #0396ff 100%);
 }
 
 .clock {
     height: 30rem;
     width: 30rem;
-    background-color: aquamarine;
+
+    /* background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%); */
+    background-image: linear-gradient(135deg, #90f7ec 10%, #32ccbc 100%);
     border-radius: 100%;
     border-color: 1px solid black;
     box-shadow: 0rem 3rem 3rem rgba(0, 0, 0, 0.158),
@@ -35,21 +38,48 @@ body {
     position: relative;
 }
 
+.clock::after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
 .handle {
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform-origin: bottom;
-    /* transform: translateX(-50%); */
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    --rotation: 0;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
 .hour {
-    --rotation: 30deg;
+    /* --rotation: 30; */
     height: 25%;
+    width: 0.5rem;
+    background-color: black;
+}
+.minute {
+    /* --rotation: 60; */
+    height: 35%;
     width: 0.3rem;
     background-color: black;
-    /* transform: translateX(-50%); */
-    transform: translateX(-50%) rotate(var(--rotation));
+}
+.second {
+    --rotation: 15;
+    height: 40%;
+    width: 0.2rem;
+    background-color: red;
 }
 
 .time {
