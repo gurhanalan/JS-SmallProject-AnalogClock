@@ -4,14 +4,14 @@
 
 ## Table of contents
 
-- [Analog Clock](#analog-clock)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
+-   [Analog Clock](#analog-clock)
+    -   [Table of contents](#table-of-contents)
+    -   [Overview](#overview)
+        -   [The challenge](#the-challenge)
+        -   [Screenshot](#screenshot)
+        -   [Links](#links)
+    -   [My process](#my-process)
+        -   [Built with](#built-with)
 
 ## Overview
 
@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](img/analogclock.jpg)
+![](img/analogclock2.jpg)
 
 ### Links
 

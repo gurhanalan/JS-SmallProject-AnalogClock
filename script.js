@@ -1,7 +1,7 @@
 const hourEl = document.querySelector(".hour");
 const minEl = document.querySelector(".minute");
 const secEl = document.querySelector(".second");
-
+const clock = document.querySelector(".clock");
 function displayTime() {
     const currentDate = new Date();
 
@@ -14,5 +14,20 @@ function displayTime() {
     hourEl.style.setProperty("--rotation", `${hoursRatio * 360}`);
 }
 
+function createTicks() {
+    for (let i = 0; i < 360; i += 6) {
+        clock.insertAdjacentHTML(
+            "beforeend",
+            `<div style="--rotation:${i}deg"class="tick">|</div>`
+        );
+    }
+    for (let i = 0; i < 360; i += 30) {
+        clock.insertAdjacentHTML(
+            "beforeend",
+            `<div style="--rotation:${i}deg"class="tick--long">|</div>`
+        );
+    }
+}
+createTicks();
 displayTime();
-setInterval(displayTime, 1000);
+// setInterval(displayTime, 1000);
