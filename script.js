@@ -2,6 +2,7 @@ const hourEl = document.querySelector(".hour");
 const minEl = document.querySelector(".minute");
 const secEl = document.querySelector(".second");
 const clock = document.querySelector(".clock");
+
 function displayTime() {
     const currentDate = new Date();
 
@@ -30,4 +31,4 @@ function createTicks() {
 }
 createTicks();
 displayTime();
-// setInterval(displayTime, 1000);
+setInterval(displayTime, 1000);
